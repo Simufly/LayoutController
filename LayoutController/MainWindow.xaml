@@ -1,0 +1,45 @@
+﻿<Window x:Class="LayoutController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LayoutController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" Background="#FF252525"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!-- 编辑布局区域 -->
+        <Canvas x:Name="LayoutCanvas" Grid.Row="0" Background="#4C002A36" >
+            
+        </Canvas>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="save" Height="50" Click="Button_Click"></Button>
+        </StackPanel>
+        
+        <!-- 选择布局区域 -->
+        <ListBox x:Name="LayoutListBox" Grid.Row="2" Background="#FF252525" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="LayoutListBox_SelectionChanged"
+                 >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding name}" Foreground="White" FontSize="20" Margin="10,0,0,0"/>
+                        <TextBlock Text="{Binding totalWidth}" Foreground="White" FontSize="20" Margin="10,0,0,0"/>
+                        <TextBlock Text="{Binding totalHeight}" Foreground="White" FontSize="20" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>

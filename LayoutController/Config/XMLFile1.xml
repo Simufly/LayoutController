@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Layouts>
+  <Layout name="Layout1" enable="true" screencount="2" totalPixelSize="3840,1080" startPoint="-1920,0">
+    <Module name="Module1" visible="true" top="0" left="-1920" width="200" height="100" />
+    <Module name="Module2" visible="true" top="200" left="0" width="300" height="200" />
+    <Module name="Module3" visible="true" top="0" left="-600" width="400" height="400" />
+    <Module name="Module4" visible="true" top="400" left="400" width="200" height="200" />
+    <Module name="Module5" visible="true" top="600" left="-1800" width="600" height="300" />
+    <!-- 添加更多模块 -->
+  </Layout>
+  <!-- 添加更多布局 -->
+</Layouts>
